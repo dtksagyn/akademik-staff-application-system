@@ -1,0 +1,118 @@
+Here’s a structured breakdown of your tasks with detailed, real-life problems for each stage. I'll list tasks under suitable categories from your workflow.
+
+---
+
+### **📌 BACKLOG (Initial Planning & Research)**
+- Research database schema best practices for multi-role user management.
+- Define system requirements and technical stack decisions (React.js, Node.js, PostgreSQL, JWT, etc.).
+- Sketch an entity-relationship diagram (ERD) for database structure.
+- Research authentication methods: JWT vs. OAuth 2.0.
+- Explore file storage options: AWS S3 vs. Firebase Storage.
+- Research API integration with e-Devlet & Nüfus Müdürlüğü.
+
+---
+
+### **🛠 DATABASE DEVELOPMENT (Phase 1 - Fully Complete Before Next Steps)**
+#### **📂 Database Schema Design**
+- Set up PostgreSQL database.
+- Create **users** table (id, role, name, email, hashed password, etc.).
+- Create **academic_positions** table (Dr. Öğr. Üyesi, Doçent, Profesör).
+- Create **applications** table (candidate_id, position_id, status, etc.).
+- Create **uploaded_documents** table (application_id, doc_type, file_path).
+- Create **jury_reviews** table (application_id, jury_id, review_status, comments, rating).
+- Define **relationships & foreign keys** between tables.
+- Implement **cascading deletes & updates** where necessary.
+
+#### **🔗 Backend API for Database**
+- Set up **Express.js** (or Django) with PostgreSQL connection.
+- Develop **CRUD operations** for users (register, login, update, delete).
+- Develop **CRUD operations** for applications (apply, edit, delete, list).
+- Implement file upload API with AWS S3 or Firebase Storage.
+- Add JWT authentication middleware for securing endpoints.
+- Write **unit tests** for database queries and APIs.
+
+#### **🛠 Database Security & Optimization**
+- Implement **data validation & sanitization** to prevent SQL injection.
+- Enable **role-based access control (RBAC)** for database operations.
+- Optimize **queries with indexing** for faster performance.
+- Setup **database backups & migrations**.
+
+📌 **Move tested database-related tasks to "Phase 1 Test" before proceeding.**
+
+---
+
+### **🖥 APPLICATION & LOGIN PAGE (Phase 2 - Backend & Frontend)**
+#### **📌 Backend API (Authentication & Authorization)**
+- Implement **JWT-based authentication**.
+- Create endpoints for **registering candidates, admins, juries, and managers**.
+- Implement **email verification & password reset flow**.
+- Secure endpoints with **role-based access control (RBAC)**.
+
+#### **📌 Frontend (React.js)**
+- Build **login & registration forms** (React + Tailwind/Material UI).
+- Implement **validation & error handling** (empty fields, incorrect credentials).
+- Develop **dashboard for candidates** (listing job positions, application status).
+- Connect frontend with backend APIs.
+
+📌 **Test all login and registration functionality before proceeding. Move to “Phase 2 Test” after verification.**
+
+---
+
+### **🛠 ADMIN PANEL (Phase 3 - Backend & Frontend)**
+#### **📌 Backend**
+- Develop API for **admin to create/edit/delete job postings**.
+- Implement **file upload validation for required documents**.
+- Implement **status tracking** (pending, accepted, rejected).
+
+#### **📌 Frontend**
+- Build **admin dashboard** to manage job postings.
+- Implement **filters & search** for applications.
+- Add **action buttons** (approve/reject applications).
+- Display uploaded **documents for verification**.
+
+📌 **Move to “Phase 3 Test” once the admin panel is fully functional.**
+
+---
+
+### **📊 YÖNETİCİ PANEL**
+- Implement **criteria setup for different academic positions**.
+- Develop **auto-calculation of candidate scores** based on criteria.
+- Enable **jury assignment** to applications.
+- Develop **report generation (PDF export)**.
+
+---
+
+### **👨‍⚖️ JÜRI PANEL**
+- Create a **jury evaluation form** for candidates.
+- Develop **review status tracking** (in progress, completed).
+- Implement **jury comments & rating system**.
+- Ensure each jury member can **submit a report**.
+
+---
+
+### **📌 FINAL TESTING & DEPLOYMENT**
+#### **✅ System-Wide Testing**
+- Conduct **unit, integration & stress tests**.
+- Ensure **all role-based access controls work correctly**.
+- Perform **cross-browser testing** (Chrome, Firefox, Edge).
+- Validate **performance & security measures**.
+- Conduct a **final acceptance test with dummy data**.
+
+#### **🚀 Deployment**
+- Deploy **backend on a cloud server (AWS, Vercel, Heroku)**.
+- Deploy **frontend on Netlify or Vercel**.
+- Set up **CI/CD pipeline for automatic deployment**.
+- Ensure **GitHub repository is documented** (README, API docs).
+- Submit project before **April 20, 2025, 17:00**.
+
+---
+
+### **🎯 Final Deliverables**
+- GitHub repository with **clean code & documentation**.
+- README file with **setup & usage instructions**.
+- Project report in **IEEE format**.
+- Trello board tracking all development phases.
+
+---
+
+This structure ensures you're following a professional workflow with clear priorities. Let me know if you need more details on any stage! 🚀
