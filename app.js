@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const connectDB = require("./config/db");
 const userRoutes = require("./routes/userRoutes");
 require("dotenv").config(); //for loading envirement variables
+const path = require("path");
 
 const app = express(); //create a server
 
@@ -10,6 +11,7 @@ const app = express(); //create a server
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "src")));
 
 //DATABASE CONNECTION
 connectDB();
