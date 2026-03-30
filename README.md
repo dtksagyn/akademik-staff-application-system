@@ -1,70 +1,250 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  
+  
+  
 
-## Available Scripts
+# ACADEMIC STAFF APPLICATION SYSTEM
+The system allows applicants to apply for academic positions, while admins, managers, and jury members manage announcements, application criteria, document review, and evaluation workflows.
+> Academic Staff Application System is a web-based platform developed to manage academic recruitment processes in universities. This project was prepared for Kocaeli University, Department of Information Systems Engineering, TBL331 Software Development Laboratory II.
+--------------------------------------------------
+## PROJECT OVERVIEW
+--------------------------------------------------
+  
+The main purpose of this project is to digitalize the academic staff application process.
+Instead of managing announcements, applications, required documents, jury reports, and final decisions manually, the system provides a centralized and organized platform for all users involved in the process.
 
-In the project directory, you can run:
+The system supports:
 
-### `npm start`
+   *- academic announcement management*
+   *- applicant registration and login*
+   *- document upload and application submission*
+   *- criteria-based evaluation workflows*
+   *- jury assignment and report submission*
+   *- final decision tracking and notifications*
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  
+  
+USER ROLES
+  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ - Applicant
+    - Logs into the system
+   - Views available academic announcements
+   - Uploads required documents
+   - Submits applications
+   - Tracks application status
 
-### `npm test`
+  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ - Admin
+   - Creates and edits announcements
+   - Manages announcement dates
+   - Defines required documents and application conditions
+   - Reviews submitted applications
 
-### `npm run build`
+  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ - Manager
+   - Defines academic appointment criteria
+   - Manages system-level rules
+   - Assigns jury members
+   - Reviews jury reports
+   - Gives the final decision
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ - Jury Member
+   - Reviews applicant documents
+   - Evaluates submitted applications
+   - Uploads evaluation reports
+   - Submits positive or negative decisions
 
-### `npm run eject`
+  
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## MAIN FEATURES
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+  
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- User authentication and authorization
+- Academic announcement creation and management
+- Application submission for different academic positions
+- Uploading required documents
+- Modular criteria management
+- Automatic score calculation
+- Jury assignment and evaluation workflow
+- PDF document generation
+- Notification support
+- Application result tracking
 
-## Learn More
+  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+--------------------------------------------------
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## ACADEMIC POSITION TYPES
 
-### Code Splitting
+--------------------------------------------------
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  
 
-### Analyzing the Bundle Size
+The system supports different academic staff categories such as:
+   - Doctor Faculty Member
+   - Associate Professor
+   - Professor
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+  
 
-### Making a Progressive Web App
+> Each category can have different application criteria and document
+> requirements.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+  
 
-### Advanced Configuration
+--------------------------------------------------
+## TECHNOLOGIES USED
+--------------------------------------------------
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+  
 
-### Deployment
+Frontend:
+- React.js
+- React Router
+- CSS
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+  
 
-### `npm run build` fails to minify
+Backend:
+- Node.js
+- Express.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  
+
+Database:
+- MongoDB or PostgreSQL
+
+  
+
+Authentication:
+- JWT
+
+  
+
+Storage:
+- Firebase Storage or AWS S3
+
+  
+
+Other Possible Integrations:
+
+- e-Devlet API
+- Nufus Mudurlugu API
+- Email/ notification services
+  
+
+
+
+  
+--------------------------------------------------
+
+## INSTALLATION
+
+--------------------------------------------------
+
+  
+
+1. Clone the repository
+    git clone https://github.com/your-username/academic-staff-application-system.git
+
+  
+
+2. Enter the project folder
+
+  
+
+    cd academic-staff-application-system
+
+  
+
+3. Install dependencies
+
+  
+
+    npm install
+
+  
+
+--------------------------------------------------
+
+## RUNNING THE PROJECT
+
+--------------------------------------------------
+
+  
+
+To start the frontend in development mode:
+
+  
+
+    npm start
+
+  
+
+The application will run at:
+
+  
+
+    http://localhost:3000
+
+  
+
+To create a production build:
+
+  
+
+    npm run build
+
+  
+
+--------------------------------------------------
+
+## BACKEND SETUP
+
+--------------------------------------------------
+
+  
+
+
+
+  
+
+    cd backend
+    npm install
+    npm run dev
+
+  
+
+Example environment variables:
+
+  
+
+    PORT=5000
+    
+    MONGO_URI=your_database_url
+    
+    JWT_SECRET=your_secret_key
+    
+    FIREBASE_API_KEY=your_key
+
+  
+
+Replace these example values with your real backend configuration.
+
+  
+
+
+- Some integrations listed in the requirements may be planned features if they are not fully implemented yet.
+
+- The system is designed with a modular structure so that academic criteria can be updated in the future.
+
+  
+
+
