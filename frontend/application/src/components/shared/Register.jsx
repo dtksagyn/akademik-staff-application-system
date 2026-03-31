@@ -195,7 +195,8 @@ export default function Register() {
               to="/login"
               className="forgot-link"
             >
-              Already have an account? Sign in.
+              Already have an account? Sign in. Almost got lost all the works
+              well
             </Link>
 
             <div id="errorMessage">{errorMessage}</div>
