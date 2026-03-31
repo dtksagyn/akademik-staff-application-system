@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap");
+
+:root {
+  --paper: #f5f2ec;
+  --paper-dark: #ede9e0;
+  --ink: #111111;
+  --ink-soft: #3a3a3a;
+  --ink-muted: #888880;
+  --green: #2d6a4f;
+  --green-light: #52b788;
+  --green-pale: #d8f3dc;
+  --rule: rgba(0, 0, 0, 0.1);
+  --shadow-paper: 4px 4px 0px #d4cfbf, 8px 8px 0px #cac5b5;
+}
+
+/* Moved from 'body' to prevent bleeding into other React routes */
+.login-page-wrapper {
+  background-color: var(--paper-dark);
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 27px,
+    rgba(0, 0, 0, 0.04) 27px,
+    rgba(0, 0, 0, 0.04) 28px
+  );
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 300;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes lineGrow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.page-wrap {
+  width: 100%;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.paper-card {
+  background: var(--paper);
+  width: 100%;
+  max-width: 400px;
+  padding: 48px 44px 44px;
+  box-shadow: var(--shadow-paper);
+  position: relative;
+  animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+  border-top: 2px solid var(--ink);
+  border-left: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+/* red margin line */
+.paper-card::before {
+  content: "";
+  position: absolute;
+  left: 56px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(200, 80, 80, 0.22);
+  pointer-events: none;
+}
+
+/* corner fold */
+.paper-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 28px 28px 0;
+  border-color: transparent var(--paper-dark) transparent transparent;
+}
+
+.card-header-area {
+  margin-bottom: 36px;
+  animation: fadeUp 0.6s 0.1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.brand-mark {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.brand-dot {
+  width: 10px;
+  height: 10px;
+  background: var(--green);
+  border-radius: 50%;
+}
+
+.brand-name {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--green);
+}
+
+.card-title {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.title-underline {
+  display: block;
+  height: 2px;
+  background: var(--ink);
+  margin-top: 12px;
+  transform-origin: left;
+  animation: lineGrow 0.5s 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.field-group {
+  margin-bottom: 22px;
+  animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.field-group:nth-child(1) {
+  animation-delay: 0.18s;
+}
+
+.field-group:nth-child(2) {
+  animation-delay: 0.24s;
+}
+
+.field-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 8px;
+}
+
+.field-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1.5px solid var(--rule);
+  padding: 10px 0;
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--ink);
+  outline: none;
+  transition:
+    border-color 0.3s ease,
+    padding-left 0.3s ease;
+}
+
+.field-input::placeholder {
+  color: var(--ink-muted);
+  font-weight: 300;
+}
+
+.field-input:focus {
+  border-bottom-color: var(--green);
+  padding-left: 4px;
+}
+
+.pass-wrap {
+  position: relative;
+}
+
+.toggle-pass {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--ink-muted);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: "DM Sans", sans-serif;
+  transition: color 0.2s;
+}
+
+.toggle-pass:hover {
+  color: var(--green);
+}
+
+.btn-login {
+  width: 100%;
+  margin-top: 32px;
+  padding: 14px 0;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 2px solid var(--ink);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition:
+    color 0.35s ease,
+    border-color 0.35s ease,
+    transform 0.15s ease;
+  animation: fadeUp 0.6s 0.32s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.btn-login::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--green);
+  transform: translateX(-100%);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 0;
+}
+
+.btn-login span {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-login:hover::after {
+  transform: translateX(0);
+}
+
+.btn-login:hover {
+  color: #fff;
+  border-color: var(--green);
+}
+
+.btn-login:active {
+  transform: translateY(2px);
+}
+
+.forgot-link {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+  color: var(--ink-muted);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+  animation: fadeUp 0.6s 0.38s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.forgot-link:hover {
+  color: var(--green);
+}
+
+#errorMessage {
+  font-size: 12px;
+  color: #b04040;
+  margin-top: 14px;
+  min-height: 18px;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.stamp {
+  margin-top: 36px;
+  padding-top: 18px;
+  border-top: 1px dashed var(--rule);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: fadeUp 0.6s 0.44s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.stamp-badge {
+  width: 28px;
+  height: 28px;
+  border: 1.5px solid var(--green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stamp-badge svg {
+  width: 13px;
+  height: 13px;
+}
+
+.stamp-text {
+  font-size: 11px;
+  color: var(--ink-muted);
+  line-height: 1.5;
+}
