@@ -219,7 +219,7 @@ export default function Register() {
             <span className="stamp-text">
               Your data is encrypted
               <br />
-              and handled with care.
+              and handled with care. heyyyy
             </span>
           </div>
         </div>
