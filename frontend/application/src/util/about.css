@@ -1,0 +1,152 @@
+/* 1. Define missing color variables (Change these hex codes to match your brand!) */
+:root {
+  --ink: #1a1a1a;
+  --ink-mid: #555555;
+  --green: #0d9488;
+  --green-pale: #f0fdfa;
+  --green-rule: #ccfbf1;
+  --line-light: #e5e7eb;
+  --line: #d1d5db;
+  --white: #ffffff;
+}
+
+.about-section {
+  padding: 100px 0;
+}
+
+/* Eyebrow styling (was missing previously) */
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.eyebrow-dash {
+  width: 30px;
+  height: 2px;
+  background-color: var(--green);
+}
+
+.eyebrow-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-mid);
+}
+
+/* Text column */
+.about-text h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.about-text h2 em {
+  font-style: italic;
+  color: var(--green);
+}
+
+.about-text p {
+  font-size: 0.95rem; /* slightly increased for readability */
+  font-weight: 300;
+  color: var(--ink-mid);
+  line-height: 1.85;
+  margin-bottom: 14px;
+}
+
+.about-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--green);
+  text-decoration: none;
+  margin-top: 20px;
+  transition: gap 0.2s;
+}
+
+.about-link:hover {
+  gap: 14px;
+  color: var(--green);
+}
+
+/* Feature list */
+.feat-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.feat-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border: 1px solid transparent;
+  border-bottom: 1px solid var(--line-light);
+  font-size: 0.95rem;
+  color: var(--ink-mid);
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    color 0.2s,
+    padding-left 0.25s;
+
+  /* Initial state for animation */
+  opacity: 0;
+  transform: translateX(14px);
+}
+
+.feat-item:first-child {
+  border-top: 1px solid var(--line-light);
+}
+
+.feat-item.visible {
+  /* Added the missing slideIn keyframes reference */
+  animation: slideIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.feat-item:nth-child(2).visible {
+  animation-delay: 0.07s;
+}
+.feat-item:nth-child(3).visible {
+  animation-delay: 0.14s;
+}
+.feat-item:nth-child(4).visible {
+  animation-delay: 0.21s;
+}
+
+.feat-item:hover {
+  background: var(--white);
+  border-color: var(--line) !important;
+  color: var(--ink);
+  padding-left: 24px;
+  border-radius: 6px; /* Optional: smooths out the hover box */
+}
+
+.feat-icon {
+  width: 30px;
+  height: 30px;
+  background: var(--green-pale);
+  border: 1px solid var(--green-rule);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--green);
+  flex-shrink: 0;
+}
+
+/* 3. MISSING KEYFRAMES ADDED HERE */
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,272 @@
+/* ─── CTA Section ────────────────────────────────────────────────────────── */
+.cta-section {
+  padding: 110px 6%;
+  background: var(--ink);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 31px,
+    rgba(255, 255, 255, 0.025) 31px,
+    rgba(255, 255, 255, 0.025) 32px
+  );
+  background-size: 100% 32px;
+  pointer-events: none;
+}
+
+.cta-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(80px, 15vw, 180px);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.03);
+  white-space: nowrap;
+  letter-spacing: -0.04em;
+  pointer-events: none;
+  user-select: none;
+}
+
+.cta-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow-light {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.eyebrow-light .eyebrow-dash {
+  background: var(--green-mid);
+}
+.eyebrow-light .eyebrow-label {
+  color: var(--green-mid);
+}
+
+.cta-section h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 4.5vw, 3.8rem);
+  font-weight: 500;
+  color: var(--white);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+.cta-section h2 em {
+  font-style: italic;
+  color: var(--green-mid);
+}
+
+.cta-section p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+  max-width: 400px;
+  margin: 0 auto 44px;
+  line-height: 1.8;
+}
+
+.cta-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn-cta-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 14px 34px;
+  background: var(--green);
+  color: var(--white);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1.5px solid var(--green);
+  border-radius: 3px;
+  text-decoration: none;
+  transition:
+    background 0.2s,
+    transform 0.15s,
+    box-shadow 0.2s;
+}
+
+.btn-cta-primary:hover {
+  background: var(--green-mid);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(46, 125, 50, 0.4);
+}
+
+.btn-cta-primary svg {
+  transition: transform 0.2s;
+}
+.btn-cta-primary:hover svg {
+  transform: translateX(4px);
+}
+
+.btn-cta-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 24px;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 3px;
+  text-decoration: none;
+  transition:
+    color 0.2s,
+    border-color 0.2s,
+    transform 0.15s;
+}
+
+.btn-cta-ghost:hover {
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 580px) {
+  .cta-actions {
+    flex-direction: column;
+  }
+}
+
+/* ─── Contact Section ────────────────────────────────────────────────────── */
+.contact-section {
+  padding: 80px 6%;
+  border-top: 1px solid var(--line);
+}
+
+.contact-wrap {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-head {
+  margin-bottom: 36px;
+}
+
+.contact-head h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.contact-head p {
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--ink-dim);
+  line-height: 1.75;
+}
+
+.contact-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 28px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
+}
+
+.contact-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  background: var(--green);
+  transition: height 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.contact-card:hover::before {
+  height: 3px;
+}
+.contact-card:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.c-label {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 6px;
+}
+
+.c-email {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.copy-btn {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  color: var(--ink-dim);
+  font-family: "Outfit", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 9px 18px;
+  border-radius: 3px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition:
+    border-color 0.2s,
+    color 0.2s,
+    background 0.2s;
+}
+
+.copy-btn:hover {
+  border-color: var(--green);
+  color: var(--green);
+  background: var(--green-pale);
+}
+
+.copy-btn.done {
+  border-color: var(--green);
+  color: var(--green);
+  background: var(--green-pale);
+}
+
+@media (max-width: 580px) {
+  .contact-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

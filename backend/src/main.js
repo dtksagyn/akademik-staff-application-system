@@ -91,21 +91,6 @@ document
       return;
     }
 
-    // Validate Password Strength
-    if (!validatePassword(password)) {
-      showError(
-        "passwordError",
-        "Şifre en az 8 karakter, büyük harf, küçük harf, rakam ve özel karakter içermelidir."
-      );
-      return;
-    }
-
-    // Validate Retype Password
-    if (password !== retypePassword) {
-      showError("retypePasswordError", "Şifreler eşleşmiyor.");
-      return;
-    }
-
     // If all validations pass, submit the form
     const formData = {
       TC: tc,
