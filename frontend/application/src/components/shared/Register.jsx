@@ -195,7 +195,8 @@ export default function Register() {
               to="/login"
               className="forgot-link"
             >
-              Already have an account? Sign in.
+              Already have an account? Sign in. Almost got lost all the works
+              well
             </Link>
 
             <div id="errorMessage">{errorMessage}</div>
@@ -218,7 +219,7 @@ export default function Register() {
             <span className="stamp-text">
               Your data is encrypted
               <br />
-              and handled with care.
+              and handled with care. heyyyy
             </span>
           </div>
         </div>
